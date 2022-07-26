@@ -7,10 +7,10 @@ from model import Model
 from dataset import DatasetTrain, DatasetValid
 
 def train(dataset_train, dataset_valid, model, batch_size, max_epochs, sequence_length):
-    if torch.cuda.is_available():
-        torch.set_default_tensor_type('torch.cuda.FloatTensor')
-    else:
-        torch.set_default_tensor_type('torch.FloatTensor')
+    # if torch.cuda.is_available():
+    #     torch.set_default_tensor_type('torch.cuda.FloatTensor')
+    # else:
+    #     torch.set_default_tensor_type('torch.FloatTensor')
     
     device = torch.device('cuda' if torch.cuda.is_avilable() else 'cpu')
     model.to(device)
